@@ -2,3 +2,4 @@ applications:
 - name: helionce-node
   description : NodeJS hello world web app.
   mem: 256M
+  host: helionce-node-greg

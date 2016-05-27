@@ -1,6 +1,6 @@
 applications:
 - name: helionce-node
   description : NodeJS hello world web app.
-  mem: 100M
+  memory: 100M
   host: helionce-node-greg
   disk_quota: 100M

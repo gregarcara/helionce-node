@@ -4,7 +4,8 @@ platform: linux
 image_resource:
   type: docker-image
   source:
-    repository: node:5.11.0-slim
+    repository: node
+    tag: 5.11.0-slim
 
 inputs:
   - name: helionce-git-repo

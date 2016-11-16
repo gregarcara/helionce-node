@@ -7,7 +7,7 @@ output_dir="${2:?Build output directory is required second arg}"
 
 echo 1 > "$output_dir/exitcode"
 
-exec >> "$output_dir/output_log.txt"
+exec >> "$output_dir/build_log.txt"
 exec 2>&1
 
 main() {

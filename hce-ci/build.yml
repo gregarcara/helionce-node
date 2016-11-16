@@ -13,4 +13,7 @@ outputs:
   - name: build_code_output
 
 run:
-  path: helionce-git-repo/hce-ci/scripts/build helionce-git-repo build_code_output
+  path: sh
+  args:
+  - -exc
+  - helionce-git-repo/hce-ci/scripts/build helionce-git-repo build_code_output

@@ -2,4 +2,7 @@
 
 set -e -x
 
+cd helionce-git-repo
 npm install
+cd ..
+cp -pr helionce-git-repo build_code_output

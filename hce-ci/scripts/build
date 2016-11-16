@@ -1,6 +1,6 @@
 #!/bin/bash
 
-source task-base
+source "$(dirname $BASH_SOURCE)/task-base"
 
 task() {
   cd $source_dir

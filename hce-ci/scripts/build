@@ -1,10 +1,10 @@
 #!/bin/bash
 
-set -e -x
+source task-base
 
-date -u +"%Y-%m-%dT%H:%M:%SZ" > build_code_output/starttime
-cd helionce-git-repo
-npm install
-cd ..
-cp -pr helionce-git-repo build_code_output
-date -u +"%Y-%m-%dT%H:%M:%SZ" > build_code_output/endtime
+task() {
+  cd $source_dir
+  npm install
+}
+
+main $@

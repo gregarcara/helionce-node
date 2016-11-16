@@ -1,0 +1,25 @@
+#!/bin/bash
+
+set -ex
+
+source_dir="${1:?App source directory is required first arg}"
+output_dir="${2:?Build output directory is required second arg}"
+
+echo 1 > "$output_dir/exitcode"
+
+exec >> "$output_dir/output_log.txt"
+exec 2>&1
+
+main() {
+  date -u +"%Y-%m-%dT%H:%M:%SZ" > "$output_dir/starttime"
+  (
+    task
+  )
+  cp -pr "$source_dir" "$output_dir/app"
+  date -u +"%Y-%m-%dT%H:%M:%SZ" > "$output_dir/endtime"
+  echo 0  > "$output_dir/exitcode"
+}
+
+task() {
+  die "Please define the function: 'task'" 
+}

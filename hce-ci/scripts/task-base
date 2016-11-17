@@ -19,6 +19,8 @@ main() {
   echo 0  > "$output_dir/exitcode"
 }
 
+die() { echo "$@" 1>&2 ; exit 1; }
+
 task() {
   die "Please define the function: 'task'"
 }

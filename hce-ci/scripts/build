@@ -3,8 +3,8 @@
 source "$(dirname $BASH_SOURCE)/task-base"
 
 task() {
-  cd $source_dir
+  cd "$source_dir"
   npm install
 }
 
-main $@
+main "$@"

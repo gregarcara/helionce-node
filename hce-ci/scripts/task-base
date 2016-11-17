@@ -1,7 +1,5 @@
 #!/bin/bash
 
-set -x
-
 source_dir="${1:?App source directory is required first arg}"
 output_dir="${2:?Build output directory is required second arg}"
 

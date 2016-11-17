@@ -8,14 +8,18 @@ echo 1 > "$output_dir/exitcode"
 exec > >(tee "$output_dir/build_log.txt")
 exec 2>&1
 
+log:date-time() {
+  date -u +"%Y-%m-%dT%H:%M:%SZ"
+}
+
 main() {
-  date -u +"%Y-%m-%dT%H:%M:%SZ" > "$output_dir/starttime"
+  log:date-time > "$output_dir/starttime"
   (
     set -ex
     task
   )
   cp -pr "$source_dir" "$output_dir/app"
-  date -u +"%Y-%m-%dT%H:%M:%SZ" > "$output_dir/endtime"
+  log:date-time > "$output_dir/endtime"
   echo 0  > "$output_dir/exitcode"
 }
 

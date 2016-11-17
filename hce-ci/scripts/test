@@ -1,0 +1,10 @@
+#!/bin/bash
+
+source "$(dirname $BASH_SOURCE)/task-base"
+
+task() {
+  cd $source_dir
+  npm test
+}
+
+main $@

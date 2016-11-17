@@ -1,7 +1,5 @@
 #!/bin/bash
 
-set -ex
-
 source "$(dirname $BASH_SOURCE)/task-base"
 
 task() {

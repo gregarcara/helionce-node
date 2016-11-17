@@ -1,6 +1,6 @@
 #!/bin/bash
 
-set -ex
+set -x
 
 source_dir="${1:?App source directory is required first arg}"
 output_dir="${2:?Build output directory is required second arg}"
@@ -13,6 +13,7 @@ exec 2>&1
 main() {
   date -u +"%Y-%m-%dT%H:%M:%SZ" > "$output_dir/starttime"
   (
+    set -ex
     task
   )
   cp -pr "$source_dir" "$output_dir/app"

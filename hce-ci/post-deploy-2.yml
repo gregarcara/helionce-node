@@ -9,6 +9,7 @@ image_resource:
 
 inputs:
   - name: build_code_output
+  - name: helionce-git-repo
 outputs:
   - name: post-deploy-1_output
 
@@ -16,4 +17,4 @@ run:
   path: sh
   args:
   - -exc
-  - echo Test 2
+  - helionce-git-repo/hce-ci/scripts/post-deploy-1 build_code_output post-deploy-1_output

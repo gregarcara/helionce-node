@@ -8,6 +8,7 @@ image_resource:
     tag: 5.11.0-slim
 
 inputs:
+  - name: helion-git-repo
   - name: build_code_output
 outputs:
   - name: post-deploy-1_output
@@ -16,4 +17,4 @@ run:
   path: sh
   args:
   - -exc
-  - echo Test
+  - helionce-git-repo/hce-ci/scripts/post-deploy-1 build_code_output post-deploy-1_output

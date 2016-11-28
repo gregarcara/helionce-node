@@ -8,7 +8,7 @@ image_resource:
     tag: 5.11.0-slim
 
 inputs:
-  - name: helion-git-repo
+  - name: helionce-git-repo
   - name: build_code_output
 outputs:
   - name: post-deploy-1_output

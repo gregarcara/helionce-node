@@ -11,10 +11,10 @@ inputs:
   - name: helionce-git-repo
   - name: build_code_output
 outputs:
-  - name: post-deploy-1_output
+  - name: post-deploy-2_output
 
 run:
   path: sh
   args:
   - -exc
-  - helionce-git-repo/hce-ci/scripts/post-deploy-1 build_code_output post-deploy-1_output
+  - helionce-git-repo/hce-ci/scripts/post-deploy-2 build_code_output post-deploy-2_output

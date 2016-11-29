@@ -10,6 +10,7 @@ image_resource:
 inputs:
   - name: helionce-git-repo
   - name: build_code_output
+  - name: deploy_output
 outputs:
   - name: post-deploy-2_output
 

@@ -4,7 +4,7 @@ source "$(dirname $BASH_SOURCE)/task-base"
 
 task() {
   echo 'Post Deploy 2'
-  cat deploy_output/applicationurl
+  echo $APPLICATION_URL
 }
 
 main "$@"

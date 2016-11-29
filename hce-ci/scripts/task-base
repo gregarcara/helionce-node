@@ -14,6 +14,7 @@ log:date-time() {
 
 main() {
   log:date-time > "$output_dir/starttime"
+  [[ -e deploy_output/applicationurl ]] && APPLICATION_URL=$(cat deploy_output/applicationurl) || APPLICATION_URL='' 
   (
     set -ex
     task

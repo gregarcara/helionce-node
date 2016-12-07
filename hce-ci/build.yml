@@ -9,6 +9,7 @@ image_resource:
 
 inputs:
   - name: helionce-git-repo
+  - name: custom-task-base
 outputs:
   - name: build_code_output
 

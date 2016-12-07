@@ -8,6 +8,7 @@ image_resource:
     tag: 5.11.0-slim
 
 inputs:
+  - name: custom-task-base
   - name: helionce-git-repo
   - name: build_code_output
   - name: deploy_output
